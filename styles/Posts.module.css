@@ -1,0 +1,33 @@
+.posts_area {
+  padding: 3em 1rem;
+  box-sizing: border-box;
+  background: linear-gradient(var(--key-color), var(--key-darker-color));
+}
+.post_list {
+  display: flex;
+}
+.post_list li {
+  width: calc(100% / 3);
+  padding: 1em 2em;
+  box-sizing: border-box;
+}
+.thumb {
+  border: 1px solid var(--light-gray);
+  box-sizing: border-box;
+  height: 180px;
+  margin-bottom: 1em;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tit {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.desc {
+}

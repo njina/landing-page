@@ -1,0 +1,38 @@
+.contact_area {
+  padding: 3em 1rem;
+  box-sizing: border-box;
+  background: #f1f1f1;
+}
+
+.tit {
+  font-weight: 700;
+  font-size: 2em;
+  width: 30%;
+  float: left;
+}
+.form_wrap {
+  width: 60%;
+}
+.insert_box {
+  float: right;
+  width: 70%;
+}
+.insert_box input[type="text"],
+.insert_box textarea {
+  width: 100%;
+}
+.insert_box input[type="text"] + textarea {
+  margin-top: 1em;
+}
+.insert_box textarea {
+  min-height: 160px;
+  resize: none;
+}
+.insert_box .btn_wrap {
+  margin-top: 1em;
+  width: 100%;
+  text-align: right;
+}
+.insert_box .btn_wrap .btn {
+  display: inline-block;
+}

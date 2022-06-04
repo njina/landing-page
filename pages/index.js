@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Posts from "../components/Posts";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -8,9 +11,11 @@ export default function Home() {
       <Head>
         <title>landing page</title>
       </Head>
-      <footer>
-        <p>서울특별시 금천구 가산디지털1로 skv1 1606호</p>
-      </footer>
+
+      <Header />
+      <Posts />
+      <Contact />
+      <Footer />
     </>
   );
 }

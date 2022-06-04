@@ -1,0 +1,16 @@
+/* footer */
+
+.footer {
+  padding: 3em 1em;
+  box-sizing: border-box;
+  background: rgb(30, 30, 32);
+  color: #fff;
+}
+.footer .logo {
+  font-size: 3em;
+}
+.footer .info {
+}
+.footer .info p + p {
+  margin-top: 0.5em;
+}
