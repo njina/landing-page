@@ -1,3 +1,4 @@
+import Link from "next/link";
 import style from "../styles/Header.module.css";
 
 const Header = () => {
@@ -5,21 +6,31 @@ const Header = () => {
     <header className={style.header}>
       <div className="wrapper clearfix">
         <h1 className={style.logo}>
-          <a href="/">logo</a>
+          <Link href="/">
+            <a>logo</a>
+          </Link>
         </h1>
         <nav id="gnb" className={style.gnb}>
           <ul className="">
             <li>
-              <a href="#company">회사소개</a>
+              <Link href="#company">
+                <a>회사소개</a>
+              </Link>
             </li>
             <li>
-              <a href="#products">제품소개</a>
+              <Link href="#products">
+                <a>제품소개</a>
+              </Link>
             </li>
             <li>
-              <a href="#posts">알립니다</a>
+              <Link href="#posts">
+                <a>알립니다</a>
+              </Link>
             </li>
             <li>
-              <a href="#contact">문의</a>
+              <Link href="#contact">
+                <a>문의</a>
+              </Link>
             </li>
           </ul>
         </nav>

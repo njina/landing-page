@@ -8,7 +8,7 @@ const Posts = () => {
         <ul className={style.post_list}>
           <li>
             <div className={style.thumb}>
-              <img src="https://picsum.photos/id/12/200/180" alt="썸네일" />
+              <Image src="/images/photo_1.jpg" alt="썸네일" width={200} height={180} />
             </div>
             <p className={style.tit}>Lorem ipsum dolor</p>
             <p className={style.desc}>
@@ -18,7 +18,7 @@ const Posts = () => {
           </li>
           <li>
             <div className={style.thumb}>
-              <img src="https://picsum.photos/id/200/200/180" alt="썸네일" />
+              <Image src="/images/photo_2.jpg" alt="썸네일" width={200} height={180} />
             </div>
             <p className={style.tit}>Lorem ipsum dolor</p>
             <p className={style.desc}>
@@ -28,7 +28,7 @@ const Posts = () => {
           </li>
           <li>
             <div className={style.thumb}>
-              <img src="https://picsum.photos/id/100/200/180" alt="썸네일" />
+              <Image src="/images/photo_3.jpg" alt="썸네일" width={200} height={180} />
             </div>
             <p className={style.tit}>Lorem ipsum dolor</p>
             <p className={style.desc}>

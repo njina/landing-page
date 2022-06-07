@@ -4,8 +4,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Posts from "../components/Posts";
 import Contact from "../components/Contact";
+import baseApiUrl from "../utils/baseApiUrl";
 
-export default function Home() {
+export default function Home({ galleryData }) {
   return (
     <>
       <Head>
@@ -13,9 +14,21 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Posts />
+      <Posts galleryData={galleryData} />
       <Contact />
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  let { id } = context.query;
+  const galleryRes = await fetch(`${baseApiUrl}/api/galleries?populate=*`);
+  const galleryData = await galleryRes.json();
+
+  return {
+    props: {
+      galleryData,
+    }, // will be passed to the page component as props
+  };
 }
