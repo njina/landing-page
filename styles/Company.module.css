@@ -1,0 +1,25 @@
+.company_area {
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+}
+.tit {
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.thumb {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+}
+.txtbox {
+  float: right;
+  width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.txtbox p + p {
+  margin-top: 1em;
+}

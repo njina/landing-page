@@ -1,0 +1,30 @@
+.products_area {
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+}
+.slider {
+}
+.slider .thumb {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  width: 200px;
+  height: 180px;
+  transition: 0.2s all linear;
+}
+.slider .thumb:hover {
+  border-radius: 100%;
+}
+.slider .thumb img {
+  filter: grayscale(1);
+  transition: 0.3s all linear;
+}
+
+.slider .thumb:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+.slider .tit {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+}

@@ -18,11 +18,16 @@
   width: 70%;
 }
 .insert_box input[type="text"],
+.insert_box input[type="email"],
 .insert_box textarea {
   width: 100%;
+  display: block;
 }
-.insert_box input[type="text"] + textarea {
-  margin-top: 1em;
+.insert_box input + textarea {
+  margin-top: 0.5em;
+}
+.insert_box textarea + input {
+  margin-top: 0.5em;
 }
 .insert_box textarea {
   min-height: 160px;
