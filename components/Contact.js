@@ -17,17 +17,23 @@ const Contact = () => {
     setEmail(e.target.value);
   };
 
+  const clearForm = (e) => {
+    setTitle("");
+    setContents("");
+    setEmail("");
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(title, contents, email);
 
-    const data = {
+    const formData = {
       title,
       contents,
       email,
     };
-    console.log(data.title, data.contents, data.email);
+    // console.log(formdata.title, formdata.contents, formdata.email);
 
+    // strpi admin에 목록화하기
     fetch(`${baseApiUrl}/api/contacts`, {
       method: "POST",
       headers: {
@@ -35,24 +41,28 @@ const Contact = () => {
       },
       body: JSON.stringify({
         data: {
-          title: `${data.title}`,
-          contents: `${data.contents}`,
-          email: `${data.email}`,
+          title: `${formData.title}`,
+          contents: `${formData.contents}`,
+          email: `${formData.email}`,
         },
       }),
-    })
-      .then((response) => console.log("response"))
-      .then((response) => {
-        console.log(response);
-        alert("문의가 등록되었습니다.");
-        //   if (response.token) {
-        //     localStorage.setItem("wtw-token", response.token);
-        //     this.props.history.push("/main_gh");
-        //   } else if (!response.token) {
-        //     alert("올바른 회원이 아닙니다");
-        //     this.props.history.push("/signup_gh");
-        //  }
-      });
+    }).then((response) => {
+      console.log(response);
+      if (response.status === 200) {
+        alert("정상적으로 문의가 등록되었습니다.");
+        clearForm();
+      } else {
+        alert("정상적으로 문의가 등록되지 않았습니다. 다시 시도해주세요.");
+      }
+    });
+
+    //sendgrid 이용하여 관리자 메일로 문의글 보내기
+    fetch("/api/sendgrid", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    }).then((response) => {
+      // console.log(response);
+    });
   };
 
   return (
@@ -61,9 +71,9 @@ const Contact = () => {
         <h2 className={style.tit}>문의</h2>
         <form name="form-contact" action="" onSubmit={handleSubmit}>
           <div className={style.insert_box}>
-            <input type="text" placeholder="문의제목" id="title" onChange={changeTitle} />
-            <textarea type="text" placeholder="내용" id="contents" onChange={changeContents} />
-            <input type="email" placeholder="답변 받을 이메일 주소" id="email" onChange={changeEmail} />
+            <input type="text" placeholder="문의제목" id="title" onChange={changeTitle} value={title} />
+            <textarea type="text" placeholder="내용" id="contents" onChange={changeContents} value={contents} />
+            <input type="email" placeholder="답변 받을 이메일 주소" id="email" onChange={changeEmail} value={email} />
             <div className={style.btn_wrap}>
               <input type="submit" value="문의하기" className={style.btn} />
             </div>
