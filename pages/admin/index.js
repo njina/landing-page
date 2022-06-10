@@ -1,9 +1,11 @@
-import SideMenu from "./components/Sidemenu";
+import React from "react";
+import AdminLayout from "../../components/admin/AdminLayout";
+import Sidebar from "../../components/admin/Sidebar";
 
 export default function Admin() {
   return (
-    <>
-      <SideMenu />
-    </>
+    <AdminLayout>
+      <Sidebar />
+    </AdminLayout>
   );
 }

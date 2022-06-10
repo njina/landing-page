@@ -1,0 +1,9 @@
+.tit {
+  font-size: 2em;
+}
+.list {
+}
+.list .listitem {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 1em;
+}
