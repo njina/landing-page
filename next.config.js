@@ -8,6 +8,11 @@ const nextConfig = {
     locales: ["en", "ko"],
     defaultLocale: "ko",
   },
+  withPWA: {
+    pwa: {
+      dest: "public",
+    },
+  },
 };
 
 module.exports = nextConfig;

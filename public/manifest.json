@@ -1,0 +1,32 @@
+{
+  "theme_color": "#fff",
+  "background_color": "#edc196",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "first-landing-page",
+  "short_name": "landing",
+  "description": "PWA\ub85c \ub9cc\ub4dc\ub294 \uccab \ud504\ub85c\uc81d\ud2b8\uc785\ub2c8\ub2e4",
+  "icons": [
+    {
+      "src": "./images/favicon/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/favicon/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/favicon/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/favicon/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
