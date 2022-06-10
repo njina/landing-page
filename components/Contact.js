@@ -47,7 +47,7 @@ const Contact = () => {
         },
       }),
     }).then((response) => {
-      console.log(response);
+      //console.log(response);
       if (response.status === 200) {
         alert("정상적으로 문의가 등록되었습니다.");
         clearForm();
